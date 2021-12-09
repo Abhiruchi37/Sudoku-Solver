@@ -46,8 +46,8 @@ class Grid:
                 thick = 3 
             else:
                 thick = 1 
-            pygame.draw.line(window, (0,0,0), (0, i*gap), (self.width, i*gap), thick) #vertical
-            pygame.draw.line(window, (0, 0, 0), (i * gap, 0), (i * gap, self.height), thick) #horizantal
+            pygame.draw.line(window, (0,0,0), (0, i*gap), (self.width, i*gap), thick) 
+            pygame.draw.line(window, (0, 0, 0), (i * gap, 0), (i * gap, self.height), thick) 
 
         
         for i in range(self.rows):
