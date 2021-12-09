@@ -12,9 +12,9 @@ def isvalid(bo, num, pos) :
     for i in range(len(bo)): #every row in column
         if bo[i][pos[1]] == num and pos[0] != i: 
             return False
-   #box
-    box_x = pos[1] // 3   #row
-    box_y = pos[0] // 3   #column
+   
+    box_x = pos[1] // 3   #column
+    box_y = pos[0] // 3   #row
 
     
     for i in range(box_y*3, box_y*3 + 3):
@@ -32,7 +32,7 @@ def solve(bo):
         row, col = find
     
     for i in range(1,10): 
-        if isvalid(bo, i, (row, col)): #num=i,pos=row,col
+        if isvalid(bo, i, (row, col)): 
             bo[row][col] = i 
 
             if solve(bo): 
